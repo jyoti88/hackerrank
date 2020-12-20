@@ -45,3 +45,44 @@ if((num<=Byte.MAX_VALUE))&&(num>=Byte.MIN_VALUE)){
         }
     }
 }
+
+
+
+
+
+
+
+arraylist 
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine());
+         ArrayList<ArrayList> listArray = new ArrayList<ArrayList>();
+         for(int i = 0;i<n;i++){
+            int d = sc.nextInt(); 
+             ArrayList<Integer> intArrayList =  new ArrayList<Integer>();
+            for(int j=0;j<d;j++){
+                intArrayList.add(new Integer(sc.nextInt()));
+            }
+            listArray.add(intArrayList);
+            sc.nextLine();
+        }
+        int q = Integer.parseInt(sc.nextLine());
+        for(int i=0;i<q;i++){
+            int x = sc.nextInt()-1;
+            int y = sc.nextInt()-1;
+            sc.nextLine();
+            if(x<listArray.size() && y<listArray.get(x).size()){
+                System.out.println(listArray.get(x).get(y));
+            }else{
+                    System.out.println("ERROR!");
+                }
